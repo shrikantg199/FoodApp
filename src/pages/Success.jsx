@@ -4,7 +4,7 @@ function Success() {
   return (
     <>
       <Navbar />
-      Success shri
+      Success
     </>
   );
 }
