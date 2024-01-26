@@ -56,11 +56,7 @@ export default function App() {
           placeholder="Enter your Food"
           className="w-full p-2 text-gray-900 placeholder-gray-400 rounded-lg outline-none lg:w-96 bg-slate-200"
         />
-        <div className="">
-          <h2 className="hidden ml-2 lg:block">
-            {new Date().toUTCString().slice(0, 16)}
-          </h2>
-        </div>
+        <div className=""></div>
       </NavbarContent>
       <NavbarMenu>
         {menuItems.map((item, index) => (
