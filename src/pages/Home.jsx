@@ -1,10 +1,15 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Category from "../components/Category";
+import FoodItems from "../components/FoodItems";
 function Home() {
   return (
     <>
-      <Navbar />
-      Home
+      <div className="w-full h-full bg-gray-200">
+        <Navbar />
+        <Category />
+        <FoodItems />
+      </div>
     </>
   );
 }
