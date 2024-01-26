@@ -3,7 +3,7 @@ import Foodcards from "./Foodcards";
 import FoodData from "./FoodData";
 function FoodItems() {
   return (
-    <div className="flex flex-wrap justify-center gap-10 lg:justify-start">
+    <div className="flex flex-wrap justify-center gap-4 lg:justify-start">
       {FoodData.map((food) => {
         return (
           <Foodcards
