@@ -1,6 +1,6 @@
 function Category() {
   return (
-    <div className="flex gap-4 mx-4 mt-6 mb-12 overflow-x-scroll lg:m-20 lg:overflow-x-hidden scroll-smooth scroll ">
+    <div className="flex gap-4 mx-4 mt-6 mb-12 overflow-x-scroll lg:m-8 lg:overflow-x-hidden scroll-smooth scroll ">
       <button className="bg-[#fc8019] px-4 rounded-lg py-1  text-lg text-white font-medium ">
         All
       </button>
