@@ -3,7 +3,7 @@ import { TiStarFullOutline } from "react-icons/ti";
 function Foodcards({ img, rating, category, desc, price, id, name }) {
   return (
     <>
-      <div className="mx-4 w-[250px] rounded-xl bg-white p-5 flex  mb-8 flex-col">
+      <div className="mx-4 w-[250px] rounded-3xl bg-white p-5 flex  mb-8 flex-col">
         <img
           src={img}
           alt=""
