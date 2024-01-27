@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Category from "../components/Category";
 import FoodItems from "../components/FoodItems";
+import Cart from "../components/Cart";
 function Home() {
   return (
     <>
@@ -9,6 +10,7 @@ function Home() {
         <Navbar />
         <Category />
         <FoodItems />
+        <Cart />{" "}
       </div>
     </>
   );
