@@ -56,7 +56,7 @@ function Cart() {
       <div>
         <FaCartPlus
           onClick={() => setActiveAcart(!activeCart)}
-          className="fixed p-3 text-5xl bg-white rounded-full cursor-pointer outline-zinc-100 right-5 bottom-10 lg:right-20 lg:p-6"
+          className="fixed p-3 text-7xl bg-white rounded-full cursor-pointer outline-zinc-100 right-5 bottom-10 lg:right-20 lg:p-6"
         />
       </div>
     </>
