@@ -1,10 +1,20 @@
 import { TiStarFullOutline } from "react-icons/ti";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/slices/CartSlice";
-function Foodcards({ img, rating, category, desc, price, id, name }) {
+function Foodcards({
+  img,
+  rating,
+  category,
+  desc,
+  price,
+  id,
+  name,
+  handleToast,
+}) {
   const dispatch = useDispatch();
   const handleAddToCart = () => {
     dispatch(addToCart({ id, name, img, price, rating, qty: 1 }));
+    handleToast(name);
   };
   return (
     <>
