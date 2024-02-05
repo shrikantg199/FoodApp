@@ -6,6 +6,11 @@ import { FaCartPlus } from "react-icons/fa";
 function Cart() {
   const [activeCart, setActiveAcart] = useState(false);
   const cartItems = useSelector((state) => state.cart.cart);
+  const totolQty = cartItems.reduce((totolQty, item) => totolQty + item.qty, 0);
+  const totalPrice = cartItems.reduce(
+    (total, item) => total + item.qty * item.price,
+    0
+  );
   console.log(cartItems);
 
   return (
@@ -43,8 +48,8 @@ function Cart() {
 
         <div className="absolute bottom-28">
           <div className="m-4 ml-8 text-sm font-bold">
-            <h3 className="text-xl">Items:-</h3>
-            <h3 className="text-xl">Total Amount:-</h3>
+            <h3 className="text-xl">Items:- {totolQty}</h3>
+            <h3 className="text-xl">Total Amount:- {totalPrice}</h3>
             <hr className="m-2 w-[18vw]" />
           </div>
 
@@ -56,7 +61,9 @@ function Cart() {
       <div>
         <FaCartPlus
           onClick={() => setActiveAcart(!activeCart)}
-          className="fixed p-3 text-7xl bg-white rounded-full cursor-pointer outline-zinc-100 right-5 bottom-10 lg:right-20 lg:p-6"
+          className={`fixed p-3 text-7xl bg-white rounded-full cursor-pointer outline-zinc-100 right-5 bottom-10 lg:right-20 lg:p-6 ${
+            totolQty > 0 && "animate-bounce delay-500 transition-all"
+          }`}
         />
       </div>
     </>
