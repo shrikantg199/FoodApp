@@ -1,24 +1,43 @@
+import { useEffect, useState } from "react";
+import FoodData from "./FoodData";
+import { setCategory } from "../redux/slices/CategorySlice";
+import { useDispatch } from "react-redux";
+
 function Category() {
+  const [categories, setCategories] = useState([]);
+  const ListuniqueCategories = () => {
+    const uniqueCategories = [
+      ...new Set(FoodData.map((food) => food.category)),
+    ];
+
+    setCategories(uniqueCategories);
+    console.log(uniqueCategories);
+    // Example output: ["Pizza", "Ice cream", "Healthy Foods"]
+  };
+
+  useEffect(() => {
+    ListuniqueCategories();
+  }, []);
+
+  const dispatch = useDispatch();
+
   return (
     <div className="flex gap-4 mx-4 mt-6 mb-12 overflow-x-scroll lg:m-8 lg:overflow-x-hidden scroll-smooth scroll ">
-      <button className="bg-[#fc8019] px-4 rounded-lg  lg: py-1  text-lg text-white font-medium ">
+      <button
+        onClick={() => dispatch(setCategory("All"))}
+        className="px-3 py-2 text-white font-bold rounded-lg bg-[#fc8019] "
+      >
         All
       </button>
-      <button className="bg-[#fc8019] px-4  lg: py-1 rounded-lg text-md text-white font-medium">
-        Pizza
-      </button>
-      <button className="bg-[#fc8019] px-4 rounded-lg  lg: py-1  text-md text-white font-medium ">
-        Healthy Foods
-      </button>
-      <button className="bg-[#fc8019] px-4 rounded-lg  lg: py-1  text-md text-white font-medium">
-        Burger
-      </button>
-      <button className="bg-[#fc8019] px-4 rounded-lg  lg: py-1  text-md text-white font-medium">
-        Ice Cream
-      </button>
-      <button className="bg-[#fc8019] px-4 rounded-lg  lg: py-1  text-md text-white font-medium">
-        Coffee
-      </button>
+      {categories.map((category, index) => (
+        <button
+          key={index}
+          onClick={() => dispatch(setCategory(category))}
+          className="bg-[#fc8019] px-4 rounded-lg lg:py-1 text-lg text-white font-medium"
+        >
+          {category}
+        </button>
+      ))}
     </div>
   );
 }
