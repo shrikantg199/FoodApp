@@ -13,12 +13,15 @@ function ItemCard({ id, img, name, price, rating, qty }) {
     <>
       <div className="flex p-3 m-4 mt-5 shadow-md rounded-xl ">
         <MdDeleteForever
-          className="absolute cursor-pointer right-10"
+          className="absolute cursor-pointer right-8  text-xl text-red-600"
           onClick={handleRemoveFromCart}
         />
         <img src={img} alt="" className="w-[80px] h-[60px]" />
         <div className="leading-5 ">
-          <h3 className="font-bold">{name}</h3>
+          <h3 className="font-bold">
+            {name.slice(0, 15)}
+            <span>...</span>
+          </h3>
 
           <div className="flex justify-between ">
             <span className="mt-2 font-normal text-green-500">₹{price}</span>
@@ -28,14 +31,14 @@ function ItemCard({ id, img, name, price, rating, qty }) {
                 onClick={() =>
                   qty > 1 ? dispatch(decrementQTY({ id })) : (qty = 0)
                 }
-                className="p-[2px] border-solid border-black border-1 rounded-md px-2 hover:bg-green-500 hover:text-white"
+                className="p-[1px] border-solid border-black border-1 rounded-md px-2 hover:bg-green-500 hover:text-white"
               >
                 -
               </button>
-              <span className="text-xl text-black">{qty}</span>
+              <span className="text-lg text-black">{qty}</span>
               <button
                 onClick={() => dispatch(incrementQTY({ id }))}
-                className="p-[2px] border-solid border-black border-1 rounded-md px-2 hover:bg-green-500 hover:text-white"
+                className="p-[1px] border-solid border-black border-1 rounded-md px-2 hover:bg-green-500 hover:text-white"
               >
                 +
               </button>
