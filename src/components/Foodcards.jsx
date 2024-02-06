@@ -18,7 +18,7 @@ function Foodcards({
   };
   return (
     <>
-      <div className="mx-4 w-[250px] rounded-3xl bg-white p-5 flex  mb-8 flex-col">
+      <div className="justify-center w-[250px] rounded-3xl bg-white p-5 flex  mb-8 flex-col">
         <img
           src={img}
           alt=""

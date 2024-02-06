@@ -22,7 +22,7 @@ function Category() {
   const dispatch = useDispatch();
 
   return (
-    <div className="flex gap-4 mx-4 mt-6 mb-12 overflow-x-scroll lg:m-8 lg:overflow-x-hidden scroll-smooth scroll ">
+    <div className="flex gap-4 justify-center mt-6 mb-12 overflow-x-scroll lg:overflow-x-hidden scroll-smooth scroll ">
       <button
         onClick={() => dispatch(setCategory("All"))}
         className="px-3 py-2 text-white font-bold rounded-lg bg-[#fc8019] "
