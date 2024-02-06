@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { IoIosCloseCircle } from "react-icons/io";
+import { RxCross1 } from "react-icons/rx";
 import ItemCard from "./ItemCard";
 import { useSelector } from "react-redux";
 import { FaCartPlus } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 function Cart() {
   const [activeCart, setActiveAcart] = useState(false);
   const cartItems = useSelector((state) => state.cart.cart);
@@ -13,6 +14,13 @@ function Cart() {
   );
   console.log(cartItems);
 
+  const navigate = useNavigate();
+  const checkoutNavigate = () => {
+    if (cartItems.length === 0) null;
+    else {
+      navigate("/success");
+    }
+  };
   return (
     <>
       <div
@@ -22,9 +30,9 @@ function Cart() {
       >
         <div className="flex justify-between mt-3 mb-4 ml-4 text-xl font-bold">
           My Order
-          <IoIosCloseCircle
+          <RxCross1
             onClick={() => setActiveAcart(!activeCart)}
-            className="mr-6 text-3xl cursor-pointer hover:text-red-500"
+            className="mr-6 text-2xl cursor-pointer hover:text-green-500"
           />
         </div>
 
@@ -48,12 +56,20 @@ function Cart() {
 
         <div className="absolute bottom-28">
           <div className="m-4 ml-8 text-sm font-bold">
-            <h3 className="text-xl">Items:- {totolQty}</h3>
-            <h3 className="text-xl">Total Amount:- {totalPrice}</h3>
+            <h3 className="text-xl">
+              Items - <span className="text-green-600">{totolQty}</span>{" "}
+            </h3>
+            <h3 className="text-xl">
+              Total Amount -{" "}
+              <span className="text-green-600">{totalPrice}</span>{" "}
+            </h3>
             <hr className="m-2 w-[18vw]" />
           </div>
 
-          <button className=" sticky p-3 bg-green-500 lg:px-[130px] px-[150px] rounded-xl text-white text-2xl m-[2px] mr-1 lg:ml-3">
+          <button
+            className=" sticky p-3 bg-green-500 lg:px-[130px] px-[150px] rounded-xl text-white text-2xl m-[2px] mr-1 lg:ml-3"
+            onClick={checkoutNavigate}
+          >
             Checkout
           </button>
         </div>
