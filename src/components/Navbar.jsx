@@ -12,8 +12,10 @@ import {
 } from "@nextui-org/react";
 
 import logo from "../assets/Mask Group.png";
-
+import { setSearch } from "../redux/slices/SearchSlice";
+import { useDispatch } from "react-redux";
 export default function App() {
+  const dispatch = useDispatch();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
@@ -55,6 +57,7 @@ export default function App() {
           type="text"
           placeholder="Enter your Food"
           className="w-full p-2 text-gray-900 placeholder-gray-400 rounded-lg outline-none lg:w-96 bg-slate-200"
+          onChange={(e) => dispatch(setSearch(e.target.value))}
         />
         <div className=""></div>
       </NavbarContent>
