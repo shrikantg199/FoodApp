@@ -5,12 +5,13 @@ import FoodItems from "../components/FoodItems";
 import Cart from "../components/Cart";
 
 import wallpaper from "../assets/wallpaper.png";
+import Homemain from "./Homemain";
 function Home() {
   return (
     <>
-      <div className="w-screen h-full bg-gray-200">
+      <div className="w-screen h-full bg-gray-200 ">
         <Navbar />
-        <img src={wallpaper} alt="" className=" w-screen h-[32%] " />
+        <Homemain />
         <Category />
         <FoodItems />
         <Cart />{" "}

@@ -22,7 +22,7 @@ function Foodcards({
         <img
           src={img}
           alt=""
-          className="w-full h-[130px] object-cover hover:scale-110 cursor-grab transition-all duration-500 ease-in-out mb-4"
+          className="w-screen h-[130px] object-cover hover:scale-110 cursor-grab transition-all duration-500 ease-in-out mb-4"
         />
         <div className="flex justify-between font-semibold">
           <h2>{name}</h2>

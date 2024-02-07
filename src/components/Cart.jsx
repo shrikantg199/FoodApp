@@ -24,7 +24,7 @@ function Cart() {
   return (
     <>
       <div
-        className={` overflow-y-scroll fixed z-20 right-0 w-full h-full bg-white top-20 lg:w-96 rounded-xl ${
+        className={` overflow-y-scroll fixed z-20 right-0 w-full h-full bg-white top-20 lg:w-96 rounded-xl  ${
           activeCart ? "translate-x-0" : "translate-x-full"
         } transition-all`}
       >
@@ -77,7 +77,7 @@ function Cart() {
       <div>
         <FaCartPlus
           onClick={() => setActiveAcart(!activeCart)}
-          className={`fixed p-3 text-7xl bg-white rounded-full cursor-pointer outline-zinc-100 right-5 bottom-10 lg:right-20 lg:p-6 ${
+          className={`fixed p-2 text-5xl bg-white rounded-full cursor-pointer outline-zinc-100 right-5 bottom-10 lg:right-20 lg:p-6 lg:text-7xl ${
             totolQty > 0 && "animate-bounce delay-500 transition-all"
           }`}
         />
