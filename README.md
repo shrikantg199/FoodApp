@@ -2,7 +2,7 @@
   <br/>
   <br/>
 <div align="center">
-  <img alt="Demo" width=600 src="QuizApp.png" />
+  <img alt="Demo" width=600 src="foodApp.png" />
 </div>
 </h2>
 <br/>
