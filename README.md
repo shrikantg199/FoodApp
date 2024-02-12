@@ -1,4 +1,4 @@
-<h2 align="center">Quiz App
+<h2 align="center">FoodApp
   <br/>
   <br/>
 <div align="center">
@@ -14,7 +14,7 @@
 1. Clone the repository:
 
  ```bash
-   git clone https://github.com/shrikantg199/QuizApp.git
+   git clone https://github.com/shrikantg199/FoodApp.git
    ```
  
 
