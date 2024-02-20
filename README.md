@@ -7,7 +7,21 @@
 </h2>
 <br/>
 
-
+#Add to cart
+<div align="center">
+  <img alt="Demo" width=600 src="foodApp.png" />
+</div>
+<hr/>
+#Remove from the Cart
+<div align="center">
+  <img alt="Demo" width=600 src="foodApp.png" />
+</div>
+<hr/>
+#checkout
+<div align="center">
+  <img alt="Demo" width=600 src="foodApp.png" />
+</div>
+<hr/>
 
 # Getting Started
 
