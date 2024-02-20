@@ -33,7 +33,7 @@ function Category() {
         <button
           key={index}
           onClick={() => dispatch(setCategory(category))}
-          className="bg-[#fc8019] px-6 py-[10px] rounded-lg text-lg text-white font-medium"
+          className="bg-[#fc8019] px-3 py-[8px] rounded-lg text-sm text-white font-medium"
         >
           {category}
         </button>

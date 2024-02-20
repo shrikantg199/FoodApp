@@ -18,17 +18,17 @@ function Foodcards({
   };
   return (
     <>
-      <div className="justify-center w-[250px] rounded-3xl bg-white p-5 flex  mb-8 flex-col">
+      <div className=" justify-center w-40 lg:h-full h-auto lg:w-[250px] rounded-3xl bg-white mb-3 p-2 lg:p-5 flex   flex-wrap">
         <img
           src={img}
           alt=""
-          className="w-screen h-[130px] object-cover hover:scale-110 cursor-grab transition-all duration-500 ease-in-out mb-4"
+          className="lg:w-screen lg:h-[130px] object-cover hover:scale-110 cursor-grab transition-all duration-500 ease-in-out mb-4"
         />
-        <div className="flex justify-between font-semibold">
-          <h2>{name}</h2>
+        <div className="flex justify-between  gap-4 font-semibold">
+          <h2>{name}..</h2>
           <span className="text-green-600">₹{price}</span>
         </div>
-        <p>{desc.slice(0, 50)}...</p>
+        <p>{desc.slice(0, 40)}...</p>
 
         <div className="flex justify-center mt-2 font-semibold">
           <span>
@@ -37,7 +37,7 @@ function Foodcards({
           {rating}
           <button
             onClick={handleAddToCart}
-            className="px-2 py-1 ml-12 text-white bg-green-500 rounded-lg"
+            className="lg:w-20 h-auto lg:h-10 w-20 lg: lg:py-1 ml-6 lg:ml-12 text-sm text-white bg-green-500 rounded-lg"
           >
             {" "}
             Add to cart

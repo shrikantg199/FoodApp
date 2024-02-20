@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Error from "./pages/Error";
 import Success from "./pages/Success";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 function App() {
   return (
     <>
@@ -12,6 +13,7 @@ function App() {
           <Route path="/success" element={<Success />} />
           <Route path="/*" element={<Error />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,17 +1,19 @@
 import React from "react";
 import { Input } from "@nextui-org/react";
-
+import Navbar from "../components/Navbar";
 const Contact = () => {
   const variants = ["bordered"];
 
   return (
-    <div name="contact" className="w-full h-screen  text-white  bg-white">
-      <div className="flex flex-col justify-center h-full max-w-screen-lg p-4 mx-auto mt-14 ">
+    <div name="contact" className="w-full h-screen    bg-white">
+      <Navbar />
+
+      <div className="flex flex-col justify-center h-full max-w-screen-lg mx-auto  ">
         <div className="pb-8 ">
-          <p className="inline text-4xl text-black font-bold border-b-4 border-gray-500">
+          <p className=" text-4xl text-black font-bold  border-gray-500 text-center">
             Food Preferences
           </p>
-          <p className="py-6 text-black">
+          <p className="py-3 text-black text-center">
             Tell us about your food preferences below
           </p>
         </div>
@@ -72,7 +74,7 @@ const Contact = () => {
 
             <textarea
               name="message"
-              placeholder="Additional Comments or Dietary Restrictions"
+              placeholder="Additional Comments"
               rows="10"
               className="p-2 text-white bg-transparent border-2 rounded-xl focus:outline-none"
             ></textarea>
