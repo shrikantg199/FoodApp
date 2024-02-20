@@ -10,7 +10,7 @@ const About = () => {
         <div className="w-full h-96 lg:w-[100vh] lg:h-[80vh]">
           <img
             className="h-full w-full object-cover"
-            src="{photo}"
+            src={photo}
             alt="Winding mountain road"
           />
         </div>
