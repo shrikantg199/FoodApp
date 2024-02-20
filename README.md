@@ -9,17 +9,17 @@
 
 #Add to cart
 <div align="center">
-  <img alt="Demo" width=600 src="foodApp.png" />
+  <img alt="Demo" width=600 src="./src/assets/add.png" />
 </div>
 <hr/>
 #Remove from the Cart
 <div align="center">
-  <img alt="Demo" width=600 src="foodApp.png" />
+  <img alt="Demo" width=600 src="./src/assets/remove.png" />
 </div>
 <hr/>
 #checkout
 <div align="center">
-  <img alt="Demo" width=600 src="foodApp.png" />
+  <img alt="Demo" width=600 src="./src/assets/checkout.png" />
 </div>
 <hr/>
 
