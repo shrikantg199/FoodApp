@@ -21,7 +21,7 @@ export default function App() {
   const menuItems = [
     { Label: "Home", link: "/" },
     { Label: "about", link: "/about" },
-    { Label: "contact", link: "/about" },
+    { Label: "contact", link: "/contact" },
   ];
 
   return (
